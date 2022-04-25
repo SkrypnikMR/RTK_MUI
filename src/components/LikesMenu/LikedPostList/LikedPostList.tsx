@@ -19,7 +19,7 @@ export function LikedPostList() {
                     <ListItemText sx={NO_LIKED_POSTS_SX}>No liked posts now.</ListItemText>
                 </ListItem>)
                 }
-                {postsWithLike.map((postWithLike) => (<LikedPost {...postWithLike}/>))}
+                {postsWithLike.map((postWithLike) => (<LikedPost key={postWithLike.id}{...postWithLike}/>))}
             </List>
     );
 }
